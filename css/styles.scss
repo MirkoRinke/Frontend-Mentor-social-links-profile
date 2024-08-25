@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+// 100: Thin
+// 200: Extra Light (Ultra Light)
+// 300: Light
+// 400: Normal (Regular)
+// 500: Medium
+// 600: Semi Bold (Demi Bold)
+// 700: Bold
+// 800: Extra Bold (Ultra Bold)
+// 900: Black (Heavy)
+
+// Colors //
+
+$grey_900: hsl(0, 0%, 8%);
+$grey_800: hsl(0, 0%, 12%);
+$grey_700: hsl(0, 0%, 20%);
+
+$white: hsl(0, 0%, 100%);
+$green: hsl(75, 94%, 57%);
+
+/* @media breakpoints */
+
+/** 1500pxoder schmaler */
+// @media (max-width: $breakpoint-lg) {
+// }
+/** 900px oder schmaler */
+// @media (max-width: $breakpoint-md) {
+// }
+/** 500px oder schmaler */
+// @media (max-width: $breakpoint-sm) {
+// }
+/** 350px oder schmaler */
+// @media (max-width: $breakpoint-xs) {
+// }
+/** 300px oder schmaler */
+// @media (max-width: $breakpoint-xxs) {
+// }
+
+/** 1500pxoder schmaler */
+$breakpoint-lg: 1500px !default;
+
+/** 900px oder schmaler */
+$breakpoint-md: 900px !default;
+
+/** 500px oder schmaler */
+$breakpoint-sm: 500px !default;
+
+/** 350px oder schmaler */
+$breakpoint-xs: 350px !default;
+
+/** 300px oder schmaler */
+$breakpoint-xxs: 300px !default;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $green $grey_700;
+}
+
+@mixin textPreset1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@mixin textPreset2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@mixin textPreset2Bold {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  background-color: $grey_900;
+
+  &--cards_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 611px;
+    width: 384px;
+    background-color: $grey_800;
+    padding: 40px;
+    border: 0px solid transparent;
+    border-radius: 12px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 465px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 327px;
+      padding: 24px;
+    }
+
+    &--img {
+      height: 88px;
+      width: 88px;
+      border: 0px solid transparent;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+
+    &--heading_container {
+      text-align: center;
+      margin-bottom: 24px;
+
+      &--main {
+        @include textPreset1;
+        color: $white;
+      }
+      &--sub {
+        @include textPreset2Bold;
+        color: $green;
+      }
+    }
+
+    &--bio {
+      @include textPreset2;
+      color: $white;
+      margin-bottom: 24px;
+    }
+
+    &--buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+
+      &--button {
+        width: 100%;
+        height: 45px;
+        color: $white;
+        @include textPreset2Bold;
+        background-color: $grey_700;
+        border: 0px solid transparent;
+        border-radius: 8px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $green;
+          color: $grey_700;
+        }
+      }
+    }
+  }
+}
