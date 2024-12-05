@@ -12,8 +12,6 @@ The main objective of this project was to practice creating a clean, responsive 
 ## 🔗 Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/html-scss-flexbox-KPpCUUZXoR)
-- [Live Site URL](https://roaring-seahorse-0efed9.netlify.app/)
-
 
 ## 🛠️ Built with
 
@@ -35,5 +33,6 @@ The main objective of this project was to practice creating a clean, responsive 
 
 ## ✍️ Author
 
-- Website - [My Github](https://github.com/MirkoRinke)
+- [Webiste](https://mirkorinke.dev)
+- [Github](https://github.com/MirkoRinke)
 - Frontend Mentor - [@MirkoRinke](https://www.frontendmentor.io/profile/MirkoRinke)
